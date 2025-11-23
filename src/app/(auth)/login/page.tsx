@@ -35,6 +35,9 @@ export default function Signin() {
         <TextInput placeholder="email" {...form.getInputProps("email")} />
         <TextInput placeholder="password" {...form.getInputProps("hash")} />
         <Button type="submit">login</Button>
+        <Button onClick={() => signIn("github", { callbackUrl: "/" })}>
+          Github
+        </Button>
       </form>
     </div>
   );
