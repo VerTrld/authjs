@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:20-alpine AS base
+FROM node:22.9.0-alpine AS base
  
 # Install dependencies only when needed
 FROM base AS deps
@@ -21,7 +21,7 @@ COPY . .
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 
-
+ENV NEXT_TELEMETRY_DISABLED 1
 # ENV NEXT_PUBLIC_API_URL=https://forum-ws.univerapp.site
 # ENV NEXTAUTH_URL=https://forum.univerapp.site
 
